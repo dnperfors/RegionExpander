@@ -1,0 +1,3 @@
+# Version 0.1 - March 24, 2017
+
+The initial version of RegionExpander. Very minimalistic, but functional.
