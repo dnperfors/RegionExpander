@@ -13,8 +13,27 @@ namespace RegionExpander
         public RegionExpander(IWpfTextView view, IOutliningManager outliningManager)
         {
             _view = view ?? throw new ArgumentNullException("view");
-            _outliningManager = outliningManager ?? throw new ArgumentNullException("outliningManager");
+            if (outliningManager == null)
+            {
+                return;
+            }
+            _outliningManager = outliningManager;
+
+            _view.Closed += OnViewClosed;
             _outliningManager.RegionsCollapsed += OnRegionCollapsed;
+        }
+
+        private void OnViewClosed(object sender, EventArgs e)
+        {
+            if (_view != null)
+            {
+                _view.Closed -= OnViewClosed;
+            }
+
+            if (_outliningManager != null)
+            {
+                _outliningManager.RegionsCollapsed -= OnRegionCollapsed;
+            }
         }
 
         private void OnRegionCollapsed(object sender, RegionsCollapsedEventArgs e)
