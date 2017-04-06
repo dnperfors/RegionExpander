@@ -1,3 +1,7 @@
+# Version 0.3 - April 6, 2017
+
+Added support for Visual Basic.
+
 # Version 0.2 - March 31, 2017
 
 Fix exception in comparison mode and make sure everything is cleaned up when view is closed.

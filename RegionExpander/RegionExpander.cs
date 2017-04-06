@@ -10,7 +10,12 @@ namespace RegionExpander
         private readonly IWpfTextView _view;
         private readonly IOutliningManager _outliningManager;
 
-        public RegionExpander(IWpfTextView view, IOutliningManager outliningManager)
+        internal static RegionExpander Register(IWpfTextView view, IOutliningManager outliningManager)
+        {
+            return new RegionExpander(view, outliningManager);
+        }
+
+        private RegionExpander(IWpfTextView view, IOutliningManager outliningManager)
         {
             _view = view ?? throw new ArgumentNullException("view");
             if (outliningManager == null)
@@ -42,7 +47,7 @@ namespace RegionExpander
             {
                 var regionSnapshot = region.Extent.TextBuffer.CurrentSnapshot;
                 var regionText = region.Extent.GetText(regionSnapshot);
-                if (regionText.StartsWith("#region"))
+                if (regionText.StartsWith("#region", StringComparison.InvariantCultureIgnoreCase))
                 {
                     _outliningManager.Expand(region);
                 }

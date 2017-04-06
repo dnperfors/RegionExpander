@@ -7,6 +7,7 @@ namespace RegionExpander
 {
     [Export(typeof(IWpfTextViewCreationListener))]
     [ContentType("CSharp")]
+    [ContentType("Basic")]
     [TextViewRole(PredefinedTextViewRoles.Document)]
     internal sealed class RegionExpanderTextViewCreationListener : IWpfTextViewCreationListener
     {
@@ -15,7 +16,7 @@ namespace RegionExpander
 
         public void TextViewCreated(IWpfTextView textView)
         {
-            new RegionExpander(textView, _outliningManagerService.GetOutliningManager(textView));
+            RegionExpander.Register(textView, _outliningManagerService.GetOutliningManager(textView));
         }
     }
 }
