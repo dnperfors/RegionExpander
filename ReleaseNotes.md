@@ -1,3 +1,7 @@
+# Version 0.4 - March 17, 2017
+
+Show region directives as unnecessary code, so that they are less visible.
+
 # Version 0.3 - April 6, 2017
 
 Added support for Visual Basic.
