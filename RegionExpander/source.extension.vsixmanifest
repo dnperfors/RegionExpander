@@ -5,8 +5,6 @@
         <DisplayName>RegionExpander</DisplayName>
         <Description xml:space="preserve">Automatically expand regions when they are closed.</Description>
         <MoreInfo>https://github.com/dnperfors/RegionExpander</MoreInfo>
-        <License>https://github.com/dnperfors/RegionExpander/blob/master/LICENSE.md</License>
-        <ReleaseNotes>https://github.com/dnperfors/RegionExpander/blob/master/ReleaseNotes.md</ReleaseNotes>
         <Tags>VisualStudio, #region, region</Tags>
     </Metadata>
     <Installation>
