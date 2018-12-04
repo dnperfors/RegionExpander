@@ -1,3 +1,7 @@
+# Version 0.5 - December 4, 2018
+
+Added VisualStudio 2019 support.
+
 # Version 0.4 - March 17, 2017
 
 Show region directives as unnecessary code, so that they are less visible.
