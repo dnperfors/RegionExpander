@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="RegionExpander" Version="0.5" Language="en-US" Publisher="dnperfors" />
+        <Identity Id="RegionExpander" Version="0.5" Language="en-US" Publisher="davidperfors" />
         <DisplayName>RegionExpander</DisplayName>
         <Description xml:space="preserve">Automatically expand regions when they are closed.</Description>
         <MoreInfo>https://github.com/dnperfors/RegionExpander</MoreInfo>
